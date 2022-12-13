@@ -61,11 +61,11 @@ Key manager exposes 3 commands
 
 4. Populate the env file to your nodejs application
   ```js
-  import { config } from 'dotenv';
+  import { config } from 'src/dotenv';
   config();
   ```
 
-  - Using `@admitkard/dotenv` over `dotenv` enables you to **quick-switch env**.
+  - Using `src/dotenv` over `dotenv` enables you to **quick-switch env**.
   - By default key-manager creates variables under `.env/{envName}.env` file and it looks like this:
     ```
     .env
