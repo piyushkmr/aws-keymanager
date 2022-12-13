@@ -1,8 +1,8 @@
 {
-  "name": "@admitkard/key-manager",
+  "name": "key-manager",
   "version": "1.0.6",
   "description": "keyManager for env secrets",
-  "repository": "https://github.com/admitkard/akd_npm_packages",
+  "repository": "https://github.com/piyushkmr/aws-keymanager",
   "main": "index.js",
   "scripts": {
     "_compile": "tsc -p .",

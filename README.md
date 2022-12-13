@@ -21,30 +21,24 @@ Key manager exposes 3 commands
 
 ## How to use keymanager?
 
-0. Make sure that your repo is setup to be able to download `@admitkard` packages.
-  ```sh
-  # .npmrc
-  @admitkard:registry=https://npm.pkg.github.com/
-  //npm.pkg.github.com/:_authToken=$YOUR_GITHUB_TOKEN
-  ```
-  And add `.env` to .gitignore:
+0. And add `.env` to .gitignore:
   ```sh
   # .gitignore
   .env
   ```
 1. Add dependencies to package.json
   ```sh
-  npm install --save @admitkard/dotenv @admitkard/key-manager
+  npm install --save dotenv aws-keymanager
   ```
   _OR_
   ```sh
-  yarn add @admitkard/dotenv @admitkard/key-manager
+  yarn add dotenv aws-keymanager
   ```
 
 2. Create a `setup:env` script in `package.json`
   ```json
   "scripts": {
-    "setup:env": "node node_modules/@admitkard/key-manager/cli/index.js populateEnv --env"
+    "setup:env": "node node_modules/key-manager/cli/index.js populateEnv --env"
   }
   // Absolute path is needed for now, as there is some issue in importing cli packages from `.bin`
   ```
@@ -67,7 +61,7 @@ Key manager exposes 3 commands
 
 4. Populate the env file to your nodejs application
   ```js
-  import { config } from '@admitkard/dotenv';
+  import { config } from 'dotenv';
   config();
   ```
 
