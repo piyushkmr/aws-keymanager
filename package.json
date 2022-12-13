@@ -1,0 +1,28 @@
+{
+  "name": "@admitkard/key-manager",
+  "version": "1.0.6",
+  "description": "keyManager for env secrets",
+  "repository": "https://github.com/admitkard/akd_npm_packages",
+  "main": "index.js",
+  "scripts": {
+    "_compile": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./scripts/build.sh",
+    "dopublish": "npm run build && cd lib && npm publish && cd .."
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bin": "./cli/index.js",
+  "dependencies": {
+    "@aws-sdk/client-ssm": "^3.131.0",
+    "commander": "^9.4.0",
+    "kleur": "^4.1.5",
+    "promptly": "^3.2.0",
+    "sprintf": "^0.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.1",
+    "@types/promptly": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
